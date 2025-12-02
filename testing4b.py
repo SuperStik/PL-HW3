@@ -53,7 +53,7 @@ def rename_variables_in_output(output):
     renamed_tokens = [renamer.get_fresh_name(token) if re.match(r'^[a-zA-Z_][a-zA-Z0-9_]*$', token) else token for token in tokens]
     return ''.join(renamed_tokens)
 
-def main():
+if __name__ == "__main__":
     remove_old_py_txt_files()
     script_dir = os.path.dirname(os.path.abspath(__file__))
     tests_path = os.path.join(script_dir, "testing-data.txt")
@@ -81,6 +81,3 @@ def main():
                                 result_file.write(f"False | {name} | Input: {input} | Expected: {expected_output} | Output: {clean_output}\n")
                         if error:
                             result_file.write(f"Error: {error}\n")
-    
-if __name__ == "__main__":
-    main()
