@@ -1,6 +1,5 @@
 from interpreter import interpret, substitute, evaluate, LambdaCalculusTransformer, parser, linearize
 from lark import Lark, Transformer
-from colorama import Fore, Style
 
 # for testing the grammar, the parser and the conversion to ASTs
 def print_trees(source_code):
@@ -124,7 +123,10 @@ def test_interpret():
     print("\ninterpret(): All tests passed!\n")
 
 if __name__ == "__main__":
-    print(Fore.GREEN + "\nTEST PARSING\n" + Style.RESET_ALL); test_parse()
-    print(Fore.GREEN + "\nTEST SUBSTITUTION\n" + Style.RESET_ALL); test_substitute()
-    print(Fore.GREEN + "\nTEST EVALUATION\n" + Style.RESET_ALL); test_evaluate()
-    print(Fore.GREEN + "\nTEST INTERPRETATION\n" + Style.RESET_ALL); test_interpret()
+    GREEN = '\033[92m'
+    RESET = '\033[0m'
+
+    print(f"\n{GREEN}TEST PARSING{RESET}\n"); test_parse()
+    print(f"\n{GREEN}TEST SUBSTITUTION{RESET}\n"); test_substitute()
+    print(f"\n{GREEN}TEST EVALUATION{RESET}\n"); test_evaluate()
+    print(f"\n{GREEN}TEST INTERPRETATION{RESET}\n"); test_interpret()
