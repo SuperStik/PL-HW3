@@ -8,4 +8,7 @@ For installation etc see the original README at [alexhkurz/lambdaC-2024](https:/
   
 The only change to the original code is that `grammar.lark`  has been modified so that comments now do not start with `--` but with `//` to accommodate "double minus" for arithmetic.
 
-See [here](https://hackmd.io/@alexhkurz/rJZJb7tekx) for details of the programming assignment 4 for the course "Programming Languages 2024".
+See [here](https://hackmd.io/@jweinberger/rkQ8qGMWZx) for details of the programming assignment 4 for the course "Programming Languages 2024".
+
+<!-- See [here](https://hackmd.io/@alexhkurz/rJZJb7tekx) for details of the programming assignment 4 for the course "Programming Languages 2024".-->
+
